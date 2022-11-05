@@ -57,9 +57,29 @@ switch ($request->type) {
 	break;
 
 	case 'mostrar-return':
-
+	$returnStore = new ReturnStoreController($request,$response);
+	$response->finish($returnStore->index());
 	break;
 
+	case 'create-return':
+	$returnStore = new ReturnStoreController($request,$response);
+	$response->finish($returnStore->create());
+	break;
+
+	case 'update-return':
+	$returnStore = new ReturnStoreController($request,$response);
+	$response->finish($returnStore->update());
+	break;
+
+	case 'export-template':
+	$operation= new OperationsController($request,$response);
+	$operation->Export();
+	break;
+
+	case 'mostrar-operations':
+	$operation= new OperationsController($request,$response);
+	$response->finish($operation->index());
+	break;
 
 	default:
 	$response->finish($response->error("La ruta no existe [2]"));
