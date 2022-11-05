@@ -10,6 +10,11 @@ require_once("./Class/Validate.php");
 require_once("./Class/Modules/Roles/RolesController.php");
 require_once("./Class/Modules/Roles/RolesModel.php");
 require_once("./Class/Modules/Roles/Roles.php");
+
 require_once("./Class/Modules/Providers/ProvidersController.php");
 require_once("./Class/Modules/Providers/ProvidersModel.php");
 require_once("./Class/Modules/Providers/Providers.php");
+
+require_once("./Class/Modules/store/ReturnStoreController.php");
+require_once("./Class/Modules/store/ReturnStoreModel.php");
+require_once("./Class/Modules/store/ReturnStore.php");

@@ -49,9 +49,18 @@ switch ($request->type) {
 	case 'create-providers':
 	$providersController = new ProvidersController($request,$response);
 	$response->finish($providersController->create());
+	break;
 
+	case 'update-providers':
+	$providersController = new ProvidersController($request,$response);
+	$response->finish($providersController->update());
+	break;
+
+	case 'mostrar-return':
 
 	break;
+
+
 	default:
 	$response->finish($response->error("La ruta no existe [2]"));
 	break;
