@@ -19,5 +19,11 @@ require_once("./Class/Modules/store/ReturnStoreController.php");
 require_once("./Class/Modules/store/ReturnStoreModel.php");
 require_once("./Class/Modules/store/ReturnStore.php");
 
+require("./../vendor/autoload.php");
 require_once("./Class/Modules/Operations/OperationsController.php");
 require_once("./Class/Modules/Operations/OperationsModel.php");
+require_once("./Class/Modules/Operations/Operations.php");
+
+require_once("./Class/Modules/Status/StatusController.php");
+require_once("./Class/Modules/Status/StatusModel.php");
+require_once("./Class/Modules/Status/Status.php");

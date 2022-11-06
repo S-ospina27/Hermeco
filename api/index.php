@@ -20,7 +20,6 @@ Validate::exists("type", "La ruta no existe [1]");
 
 switch ($request->type) {
 	case 'mostrar-roles':
-		// aqui instacion el controlador y en response->finish()  meto el controlador y llamo el medoto que valla utilizar
 	$rolesController = new RolesController($request, $response);
 	$response->finish($rolesController->index());
 	break;
@@ -76,9 +75,26 @@ switch ($request->type) {
 	$operation->Export();
 	break;
 
+	case 'Export-operations':
+	$operation= new OperationsController($request,$response);
+	$operation->exportExcel();
+	break;
+
+	case 'create-operations':
+
+	break;
+
+	case 'assigned-placa':
+
+	break;
 	case 'mostrar-operations':
 	$operation= new OperationsController($request,$response);
 	$response->finish($operation->index());
+	break;
+
+	case 'mostrar-status':
+	$status= new StatusController($request,$response);
+	$response->finish($status->index());
 	break;
 
 	default:
